@@ -1,19 +1,18 @@
 public class Client {
     private final int PORT = 9876;
     private final String SERVER = "localhost";
+    private final String UDP_PROTOCOL = "udp";
     private Protocol protocol;
 
-    public Client(String type) {
-        if(type.equals("udp")){
+    public Client(String protocolType) {
+        if (protocolType.equals(UDP_PROTOCOL)) {
             protocol = new UDPProtocol();
         }
     }
 
     public String sendMessageToServer(String msg) {
-        protocol.pack(msg, SERVER, PORT);
-        protocol.sendPacket();
-        protocol.receivePacket();
-        String received = protocol.unpack();
+        protocol.sendPacket(msg, SERVER, PORT);
+        String received = protocol.receivePacket();
         return received;
     }
 
