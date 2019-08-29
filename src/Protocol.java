@@ -1,9 +1,13 @@
 import java.net.InetAddress;
 
 public interface Protocol {
-    public void sendPacket(String msg);
-    public void sendPacket(String msg, String hostname, int port);
-    public void sendPacket(String msg, InetAddress address, int port);
-    public String receivePacket();
-    public void closeSocket();
+    void sendPacket(String msg);
+
+    void sendPacket(String msg, String hostname, int port);
+
+    void sendPacket(String msg, InetAddress address, int port);
+
+    String receivePacket();
+
+    void closeSocket();
 }
