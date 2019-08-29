@@ -8,6 +8,8 @@ public class Server extends Thread {
     public Server(String protocolType) {
         if (protocolType.equals(UDPProtocol.UDP_PROTOCOL)) {
             protocol = new UDPProtocol(PORT);
+        } else if (protocolType.equals(TCPProtocol.TCP_PROTOCOL)) {
+            protocol = new TCPServerProtocol(PORT);
         }
     }
 

@@ -6,6 +6,8 @@ public class Client {
     public Client(String protocolType) {
         if (protocolType.equals(UDPProtocol.UDP_PROTOCOL)) {
             protocol = new UDPProtocol();
+        } else if (protocolType.equals(TCPProtocol.TCP_PROTOCOL)) {
+            protocol = new TCPClientProtocol(SERVER, PORT);
         }
     }
 
