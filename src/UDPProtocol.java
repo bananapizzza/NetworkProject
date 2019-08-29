@@ -7,6 +7,7 @@ import java.net.*;
  */
 public class UDPProtocol implements Protocol {
 
+    public static final String UDP_PROTOCOL = "udp";
     /*
      * Fields used for the connection
      */

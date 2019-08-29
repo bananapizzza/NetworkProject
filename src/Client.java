@@ -1,11 +1,10 @@
 public class Client {
     private final int PORT = 9876;
     private final String SERVER = "localhost";
-    private final String UDP_PROTOCOL = "udp";
     private Protocol protocol;
 
     public Client(String protocolType) {
-        if (protocolType.equals(UDP_PROTOCOL)) {
+        if (protocolType.equals(UDPProtocol.UDP_PROTOCOL)) {
             protocol = new UDPProtocol();
         }
     }

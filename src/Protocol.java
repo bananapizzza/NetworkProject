@@ -1,4 +1,3 @@
-import java.io.Closeable;
 import java.net.InetAddress;
 
 public interface Protocol {
