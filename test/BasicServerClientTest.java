@@ -10,8 +10,8 @@ public class BasicServerClientTest {
 
     @Before
     public void setup() {
-        new Server().start();
-        client = new Client();
+        new Server("udp").start();
+        client = new Client("udp");
     }
 
     @Test
